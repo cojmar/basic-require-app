@@ -1,12 +1,12 @@
 {
     "appDir": "../src",
-    "mainConfigFile": "../src/scripts/loader.js",
+    "mainConfigFile": "../src/app.js",
     "dir": "../build",
     // List the modules that will be optimized.
     "modules": [
         {
             // module names are relative to baseUrl
-            "name": "app_main"
+            "name": "app"
         }
     ]
 }

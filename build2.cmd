@@ -1,1 +1,0 @@
-@node tools/r.js -o name=main baseUrl=./src/Scr mainConfigFile=./src/scripts/main.js out=./build/main.min.js optimize=none
