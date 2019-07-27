@@ -1,17 +1,17 @@
 (function (factory) {
-    'use strict';
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery'], factory);
-    } else {
-        factory(jQuery);
+    'use strict';        
+    if (typeof define === 'function' && define.amd) {   
+        define(['css!assets/css/main','text!assets/css/main.css'],function(){console.log(arguments)});             
+        factory();
+    }else{
+         factory();
     }
-} (function ($) {
+}(function () {        
     var obj ={
-        init:function(){
-            console.log('app init ok');
+        init:function(){   
+            $('body').append("Hellow world311");
         }
-    };   
-
+    };
     $(function(){
         obj.init();
     })    

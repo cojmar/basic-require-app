@@ -1,19 +1,26 @@
 require.config({
-    paths: {
-        app_main:'../scripts/main',
-        jquery: '../lib/jquery.min'    
+    baseUrl: "./",
+    map: {
+        "*": {
+            "text": "lib/require-text",
+            "css":"lib/require-css",
+        }        
     },
-    shim: {        
-        app_main: {
-            exports: 'app_main',
-            deps: [
-                'jquery'
+    paths: {
+        requireLib:"lib/require.min",
+        app_main:"scripts/main",
+        jquery: "lib/jquery.min"    
+    },
+    shim: {          
+        app_main: {           
+            deps: [                
+                "jquery",
+                "requireLib"
             ]
         }
-    }
+    }    
 });
-require([   
-    'app_main'
-], function(app_main) {    
-    
-});
+require([  
+    "requireLib",
+    "app_main"       
+]);
